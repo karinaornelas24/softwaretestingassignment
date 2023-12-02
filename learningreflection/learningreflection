@@ -1,0 +1,49 @@
+## 1. How was your experience testing the given Webapp?
+- 
+     It was very confusing at the beginning honestly speaking. I'm more of a practical learner so even though I have done the previous course in Percipio and the quizzes, I felt like I haven't learned anything. I started watching the videos again while analysing the task and it started to get clearer and clearer.
+
+## 2. How did you write or manage your test case? Describe the process.
+- 
+    I started analysing the example of Login Page and how it was written to be able to reproduce the same on the other ones. I followed every step and reported each one down. 
+
+## 3. Do you recommend any other tools or styles for Test case management. 
+ -     
+    Not at the moment.
+
+## 4. Which IDE (Visual Code or Atom or else) have you used to edit files?
+- 
+    Visual Code.
+     
+## 5. Did you find any trouble? how did you solve the trouble?
+-
+    I did find some trouble when writing a test case for deleting a template, so I googled to help me to find the answer.
+
+## 6. Did you find any trouble using Github? have you used Github before? where?
+-
+ 
+    I have used Github before but I always get a bit confused when working with it when it comes to merge.
+      
+
+## 7. If in the future if you need to automate these test cases, which framework or language will you use? and describe why (Robot Framework, Cypress, Selenium, or any other )
+- 
+    For now I don't have a preference as I haven't worked with these frameworks but I will make sure to 
+
+
+## 8. Kindly search the term `Tester` `Automation Tester` glassdoor and LinkedIn or any other job search website. Currently, list the skills and competencies that are most in-demand in software testing
+- 
+        Jira, confluence, Phyton, Java, Selenium, Playwright, Scrum, Javascript, TestRails, CodeceptJs, AWS, MySQL.
+        Effective communication, analytical mind, problem-solving, relationship building.
+
+
+## 9. **Let's assume** that if you are going to continue with the career in Software Testing, which technical and soft skills do you need to fill up the blank in your resume?
+- 
+
+    I actually do want to follow a carrer in Software Testing so I hope I can learn with this task's feedback as it was my very first one attempt of testing. Practice makes it perfect, I was very scared of this assignment when I saw so many instructions and files and I thought I couldn't do it, but after watching the recording class I realised I just needed to focus and reproduce what I have been learning. So far now I believe I need to know more about different frameworks for software testing.
+
+
+## 10. Write short Learning Reflection and  Free words Do you think that project helped in putting theoretical knowledge into practice? Describe? (is there anything else that you would like to share with us concerning the current study module). e.g. regarding the quality of content and your learning (or) improvement ideas? 
+-
+
+    This project definitely helped me to put into practice all the theoretical material we had throughout this course. I do think there should be Fundamentals of Software Testing 2, as I feel there's much more I could learn.
+
+
