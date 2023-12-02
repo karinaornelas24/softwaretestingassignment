@@ -1,46 +1,112 @@
+### **Register functionality Testsuit (Collection of Test case) Overview Teacher has given examples**
 
 #******************** Settings ************************
 
 *** Settings ***
 
-# TODO: Write Documentation e.g. User Registration Test scenario with verification, valid and invalid credentials.
+Documentation Testing the register functionality. Register Test scenario with verification, valid and invalid credentials.	
 
-Documentation	
-
-# TODO: Write Precondition, Postcondition, Tags
-
-Pre Condition	
-Post Condition	
-Tags
+Pre Condition	Open Browser
+Post Condition	Close All Browser
+Tags	Register, TS-1-Register
 
 #******************* Common Variables ********************
 
 *** Variables ***
 
-# NOTE: Please Remove your login credential before uploading Assignments
-
-# TODO: Write Registration field variables
-
-LoginUrl = https://gitlab.com/users/sign_up
-
-
+LoginUrl= https://gitlab.com/users/sign_up
+First_Name= 
+Last_Name= 
+UserName= 
+Email= 
+Password= 
+Invalid_Username= 
+Invalid_Password= 
+Invalid_Email= 
+Empty=
 
 #******************** Test Cases *************************
 
 *** Test Case ***
 
-# TODO: Write Positive and Negative Test Cases and Test Process steps (Think about possible test cases)
+# Positive Tests
 
-# Positive Test examples are below write test process steps for each below test case
+Register user with valid username and password 
+	Navigate to Register Page  LoginUrl
+	Input First name  First_Name
+	Input Last name  Last_Name
+	Input Username  UserName
+	Input Email  Email
+	Input Password  Password
+	Submit Register Form
+	Verify Page Should Contain Step 1: Verify email address
 
-	Register user with valid username and password 
-	- Remember credentials which you are going to use for whole application testing 
 
-# Negative Test examples keywords are below write test process steps for each below test case 
+# Negative
 
-	Register user with same above username,
-		...empty password,
-		...invalid email,
-		...Without recaptcha,
+Register user with empty Firs Name and Last Name
+	Navigate to Register Page   LoginUrl
+	Input First name  Empty
+	Input Last name  Empty
+	Input Username  UserName
+	Input Email  Email
+	Input Password  Password
+	Submit Register Form
+	Verify that Error message should show This field is required.
+
+
+Register user with same above username
+	Navigate to Register Page   LoginUrl
+	Input First name  First_Name
+	Input Last name  Last_Name
+	Input Username  UserName
+	Input Email  Email
+	Input Password  Password
+	Submit Register Form
+	Verify Page Should Contain Username is already taken.
+
+
+Register with empty password
+	Navigate to Register Page   LoginUrl
+	Input First name  First_Name
+	Input Last name  Last_Name
+	Input Username  UserName
+	Input Email  Email
+	Input Password  Empty
+	Submit Register Form
+	Verify that Error message should show Minimum length is 8 characters.
+
+
+Register with empty username
+	Navigate to Register Page   LoginUrl
+	Input First name  First_Name
+	Input Last name  Last_Name
+	Input Username  Empty
+	Input Email  Email
+	Input Password  Password
+	Submit Register Form
+	Verify that Error message should show Username is too short (minimum is 2 characters)
+
+
+Register with invalid email
+	Navigate to Register Page   LoginUrl
+	Input First name  First_Name
+	Input Last name  Last_Name
+	Input Username  UserName
+	Input Email  Invalid_Email
+	Input Password  Password
+	Submit Register Form
+	Verify that Error message should show Please provide a valid email address.
+
+
+Register with already taken email
+	Navigate to Register Page   LoginUrl
+	Input First name  First_Name
+	Input Last name  Last_Name
+	Input Username  UserName
+	Input Email  Email
+	Input Password  Password
+	Submit Register Form
+	Verify that Error message should show Email has already been taken
 
 
