@@ -1,0 +1,36 @@
+
+## Summary (Summarize the bug encountered concisely)
+
+     Bug description helps the developer to understand the bug. It describes the problem encountered.
+     In the step to Create a new project, the title says 'Create black project' instead of 'Create blank project'
+
+## Steps to reproduce     
+
+    To find the issue Navigate to GitLab Home Page and Click on New Project button. The first option says 'Create black project'
+
+## What is the current bug behavior?
+
+    When clicking on 'Create black project' it behaves as expected opening the page to Create a blank project, however there is a typo.
+
+## What is the expected correct behavior?
+
+    It's expected to be written 'Create blank project'.
+     
+## Relevant logs and/or screenshots
+
+    https://ibb.co/jwjbBw6
+    
+    
+## Possible fixes
+
+    Update title to 'Create blank project'.
+
+## Whom do you report/ Assign To/ Tags
+
+    /label ~bug ~reproduced ~needs-update
+    /cc @project-manager 
+    /assign @qa-tester
+
+## Priority
+
+      Major priority.
