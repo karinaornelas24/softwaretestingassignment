@@ -1,35 +1,66 @@
+### **Issue functionality Testsuit (Collection of Test cases) Overview Teacher has given examples**
 
 #******************** Settings ************************
 
 *** Settings ***
-Documentation	Issue Test scenario. CRUD Operation: Create, Read, Update, Delete
 
-# TODO: Write Precondition and Postcondition, Tags 
+Documentation	Testing the Issue funcionality. Issue Test scenario creating, reading, updating and deleting
 
-Pre Condition	Tips: Project must be created by the user before 
-Post Condition	
-Tags
+Pre Condition	Open Browser, Log in, Create a Project 
+Post Condition	Close Browser
+Tags	Issue, TS-1-Issue 
 
 #******************* Common Variables ********************
 
-
 *** Variables ***
 
-# NOTE: Please Remove your login credential before uploading Assignments
-
-# TODO: Write Issue creation field variables, Updated name of the issue
-
-
+Issue_Name=
+Update_Issue_Name=
+Username=
 
 #******************** Test Cases *************************
 
 *** Test Case ***
 
-# TODO: Write Positive Test Cases and Test Process steps
+# Positive Tests
 
-# Positive Test examples are below write test process steps for each below test case
+Create issue
+	Navigate to GitLab Home Page
+	Click on the Project Name
+	Click on Issues on the left sidebar
+	Click on New Issue
+	Input Title Issue_title
+	Click on Create Issue
+	Verify Page should show Issue created just now
 
-	Create issue,
- 	Update name of issue, 
-	Create second issue with privious updated name
-    Delete first issue
+
+Update name of issue
+	Navigate to GitLab Home Page
+	Click on the Project Name
+	Click on Issues on the left sidebar
+	Click on the issue 
+	Click on Edit
+	Input new name
+	Click on Save Changes
+	Verify message should show Username changed title from Issue_Name to Updated_Issue_Name just now
+
+
+Create second issue with previous updated name
+	Navigate to GitLab Home Page
+	Click on the Project Name
+	Click on Issues on the left sidebar
+	Click on New Issue
+	Input Title Issue_title
+	Click on Create Issue
+	Verify Page should show Issue created just now
+
+
+Delete first issue
+	Navigate to GitLab Home Page
+	Click on the Project Name
+	Click on Issues on the left sidebar
+	Click on Issue_title
+	Click on 3 dots button
+	Click on Delete Issue
+	Confirm clicking on Delete issue again
+	Verify message should show The issue was successfully deleted.
