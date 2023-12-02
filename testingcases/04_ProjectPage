@@ -1,0 +1,85 @@
+
+### **Project Page functionality Testsuit (Collection of Test case) Overview Teacher has given examples**
+
+#******************** Settings ************************
+
+*** Settings ***
+
+Documentation	Testing the Project Test scenario. Create blank and template project, Update name of the template project, Delete template project Valid project creation.	
+
+Pre Condition	Open Browser, Log in
+Post Condition	Close All Browsers 
+Tags	Create, Project, Delete, Edit, TS-1-Project
+
+#******************* Common Variables ********************
+
+*** Variables ***
+
+Project_Name= 
+Invalid_Project_Name= 
+Username= 
+Edited_Project_Name=
+
+
+#******************** Test Cases *************************
+
+*** Test Cases ***
+
+Create blank project
+	Navigate to GitLab Home Page
+	Click on New Project button
+	Click on Create Blank Project
+	Input Project_Name
+	Click on Create Project button
+	Verify Page should show Project 'Project_Name' was successfully created.
+
+
+Create template project 
+	Navigate to GitLab Home Page
+	Click on New Project button
+	Click on Create from template
+	Choose and click on Use template
+	Input Project_Name
+	Verify Page should show The project was successfully imported.
+
+
+Update name of template project
+	Navigate to GitLab Home Page
+	Click on the Project Name
+	Click on Settings on the left sidebar
+	Click on General
+	Edit Project Name
+	Click on Save Changes
+	Verify that Page should show Project 'Edited_Project_Name' was successfully updated.
+
+
+Delete template project
+	Navigate to GitLab Home Page
+	Click on the Project Name
+	Click on Initialized from Template_Name project template
+	Click on Browse files
+	Click on Create merge request
+	Click on merge request
+	Click on merge
+	Verify messagen should say Merged by Username just now (Date and time)just now
+
+
+# Negative 
+
+Create a blank project with the previous same name
+	Navigate to GitLab Home Page
+	Click on New Project button
+	Click on Create Blank Project
+	Input Project name
+	Click on Create Project button
+	Verify that Error Message should show The form contains the following errors: - Name has already been taken -Path has already been taken
+
+Create a blank project with an invalid Project name	
+	Navigate to GitLab Home Page
+	Click on New Project button
+	Click on Create Blank Project
+	Input Invalid_Project_Name
+	Click on Create Project button
+	Verify that Error message should show Name must start with a letter, digit, emoji, or underscore.
+
+
